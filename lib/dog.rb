@@ -33,7 +33,7 @@ bro_greeting.upcase
 #  def name=(dog_name)
 #    this_dogs_name = dog_name
 #  end
-# 
+#
 #  def name
 #    this_dogs_name
 #  end
@@ -48,7 +48,7 @@ bro_greeting.upcase
 #lassie = Dog.new
 #lassie.name = "Lassie"
 
-#lassie.name 
+#lassie.name
 
 # Run the file in your terminal by typing ruby dog.rb. You should see an error message, with the following snippet inside it:
 
@@ -65,19 +65,19 @@ bro_greeting.upcase
 # Let's refactor our Dog class to use an instance variable instead of a local variable to set and get an individual dog's name.
 
 class Dog
- 
+
   def name=(dogs_name)
     @this_dogs_name = dogs_name
   end
- 
+
   def name
     @this_dogs_name
   end
 end
- 
+
 lassie = Dog.new
 lassie.name = "Lassie"
- 
+
 puts lassie.name
 
 # It worked! Why did it work? Inside the #name= method, we set the value of @this_dogs_name equal to whatever string is passed in as an argument. Then, we are able to call on that same instance variable in a totally separate method, the #name method.
